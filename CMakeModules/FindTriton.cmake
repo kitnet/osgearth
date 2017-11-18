@@ -74,6 +74,7 @@ ENDIF (UNIX)
 FIND_PATH(TRITON_INCLUDE_DIR Triton.h
     "${TRITON_DIR}/Public Headers"
     "$ENV{TRITON_PATH}/Public Headers"
+    "$ENV{TRITON_PATH}/include/triton"
     $ENV{TRITON_PATH}
     ${TRITON_DIR}/include
     $ENV{TRITON_DIR}/include
@@ -105,8 +106,8 @@ MACRO(FIND_TRITON_LIBRARY MYLIBRARY MYLIBRARYNAME)
 		/opt/lib
 		/usr/freeware/lib64
         "C:/Triton SDK/lib"
-	PATH_SUFFIXES
-		${TRITON_ARCH}
+	#PATH_SUFFIXES
+	#	${TRITON_ARCH}
     )
 
 ENDMACRO(FIND_TRITON_LIBRARY MYLIBRARY MYLIBRARYNAME)
